@@ -50,7 +50,7 @@ class RMMProjectScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Homepro internal application for Homecard subscription to Homepro customers.",
+                      "Application within Homepro for applying for Homecard membership for Homepro customers. The application works with the ID card reader. which can read the ID card to apply straight away",
                       style: TextStyle(
                         fontSize: getProportionateScreenHeight(22),
                         color: Colors.white,
@@ -180,7 +180,7 @@ class RMMProjectScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Homepro internal application for Homecard subscription to Homepro customers.",
+                      "Application within Homepro for applying for Homecard membership for Homepro customers. The application works with the ID card reader. which can read the ID card to apply straight away",
                       style: TextStyle(
                         fontSize: getProportionateScreenHeight(22),
                         color: Colors.white,
@@ -284,7 +284,7 @@ class RMMProjectScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Homepro internal application for Homecard subscription to Homepro customers.",
+                      "Application within Homepro for applying for Homecard membership for Homepro customers. The application works with the ID card reader. which can read the ID card to apply straight away",
                       style: TextStyle(
                         fontSize: getProportionateScreenHeight(22),
                         color: Colors.white,
@@ -312,7 +312,6 @@ class RMMProjectScreen extends StatelessWidget {
                           "lib/assets/png/rmm/rmm2.jpg",
                         ),
                       ),
-                      
                     ],
                   ),
                   SizedBox(
@@ -335,16 +334,14 @@ class RMMProjectScreen extends StatelessWidget {
                           "lib/assets/png/rmm/rmm4.jpg",
                         ),
                       ),
-                     
                     ],
                   ),
                   SizedBox(
                     height: getProportionateScreenHeight(10),
                   ),
-                   Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                     
                       SizedBox(
                         height: SizeConfig.screenHeight! * 0.7,
                         width: SizeConfig.screenWidth! * 0.3,
