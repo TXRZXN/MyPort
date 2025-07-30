@@ -98,8 +98,11 @@ class InternshipWidget extends StatelessWidget {
   }
 
   Widget buildbodyDesktop(BuildContext context) {
+    bool isPortrait = SizeConfig.screenHeight! > SizeConfig.screenWidth!;
     return Container(
-      width: SizeConfig.screenWidth! * 0.3,
+      width: isPortrait
+          ? SizeConfig.screenWidth! * 0.8
+          : SizeConfig.screenWidth! * 0.3,
       height: SizeConfig.screenHeight! * 0.72,
       decoration: BoxDecoration(
           color: Colors.white,

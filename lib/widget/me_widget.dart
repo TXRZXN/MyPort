@@ -61,15 +61,24 @@ class MeWidget extends StatelessWidget {
   }
 
   Widget buildbodyDesktop(BuildContext context) {
-    return SizedBox(
-      width: SizeConfig.screenWidth! * 0.25,
-      height: SizeConfig.screenHeight! * 0.7,
+    final screenWidth = SizeConfig.screenWidth!;
+    final screenHeight = SizeConfig.screenHeight!;
+    final isPortrait = screenHeight > screenWidth;
+
+    final double width = isPortrait ? screenWidth * 0.4 : screenWidth * 0.25;
+    final double height = isPortrait ? screenHeight * 0.2 : screenHeight * 0.55;
+
+    return Center(
+        child: SizedBox(
+      width: width,
+      height: height,
       child: Stack(
         children: [
           Transform.rotate(
-            angle: 10 * (pi / 180),
+            angle: 5 * (pi / 180),
             child: Container(
-              width: SizeConfig.screenWidth! * 0.25,
+              width: width,
+              height: height, // กำหนดเท่าความสูง Container รูปภาพ
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
@@ -77,7 +86,7 @@ class MeWidget extends StatelessWidget {
             ),
           ),
           Container(
-            width: SizeConfig.screenWidth,
+            width: width,
             padding: EdgeInsets.all(getProportionateScreenHeight(8)),
             decoration: BoxDecoration(
               color: Colors.black,
@@ -93,7 +102,7 @@ class MeWidget extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ));
   }
 
   Widget buildbodyTablet(BuildContext context) {

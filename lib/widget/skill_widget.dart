@@ -299,9 +299,15 @@ Container boxSkillMobile(String image, String name) {
 }
 
 Container boxSkillDesktop(String image, String name) {
+  bool isPortrait = SizeConfig.screenHeight! > SizeConfig.screenWidth!;
+
   return Container(
-    width: SizeConfig.screenHeight! * 0.2,
-    height: SizeConfig.screenHeight! * 0.2,
+    width: isPortrait
+        ? SizeConfig.screenHeight! * 0.08
+        : SizeConfig.screenHeight! * 0.18,
+    height: isPortrait
+        ? SizeConfig.screenHeight! * 0.08
+        : SizeConfig.screenHeight! * 0.18,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
       color: Colors.white12,
@@ -350,8 +356,8 @@ Container boxSkillDesktop(String image, String name) {
 
 Container boxSkillTablet(String image, String name) {
   return Container(
-    width: SizeConfig.screenHeight! * 0.2,
-    height: SizeConfig.screenHeight! * 0.2,
+    width: SizeConfig.screenHeight! * 0.18,
+    height: SizeConfig.screenHeight! * 0.18,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
       color: Colors.white12,

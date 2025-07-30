@@ -152,6 +152,7 @@ class _AboutMeScreenState extends State<AboutMeScreen> {
   }
 
   Widget buildbodyDesktop(BuildContext context) {
+    bool isPortrait = SizeConfig.screenHeight! > SizeConfig.screenWidth!;
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color(0xff1e1e1e),
@@ -193,6 +194,9 @@ class _AboutMeScreenState extends State<AboutMeScreen> {
                       ),
                       SizedBox(
                         width: SizeConfig.screenWidth! * 0.5,
+                        height: isPortrait
+                            ? SizeConfig.screenHeight! * 0.2
+                            : SizeConfig.screenHeight! * 0.5,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: const [

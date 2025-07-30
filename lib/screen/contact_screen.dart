@@ -176,115 +176,119 @@ class _ContactScreenState extends State<ContactScreen> {
   }
 
   Widget buildbodyDesktop(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: const Color(0xff1e1e1e),
-        appBar: appbarDesktop(context),
-        body: Padding(
-          padding: EdgeInsets.symmetric(
-            vertical: getProportionateScreenWidth(10),
-            horizontal: getProportionateScreenHeight(10),
-          ),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(
-                  height: getProportionateScreenHeight(20),
+    bool isPortrait = SizeConfig.screenHeight! > SizeConfig.screenWidth!;
+    return isPortrait
+        ? buildbodyMobile(context)
+        : SafeArea(
+            child: Scaffold(
+              backgroundColor: const Color(0xff1e1e1e),
+              appBar: appbarDesktop(context),
+              body: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: getProportionateScreenWidth(10),
+                  horizontal: getProportionateScreenHeight(10),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "CONTACTS",
-                      style: TextStyle(
-                        fontSize: getProportionateScreenHeight(40),
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: getProportionateScreenHeight(20),
                       ),
-                    ),
-                    SizedBox(
-                      height: SizeConfig.screenHeight! * 0.7,
-                      child: const VerticalDivider(
-                        color: Colors.white,
-                        thickness: 2,
-                      ),
-                    ),
-                    SizedBox(
-                      height: SizeConfig.screenHeight! * 0.7,
-                      width: SizeConfig.screenWidth! * 0.45,
-                      child: Column(
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.phone,
-                                size: getProportionateScreenHeight(30),
-                              ),
-                              SizedBox(
-                                width: getProportionateScreenWidth(30),
-                              ),
-                              Text(
-                                "092-3492220",
-                                style: TextStyle(
-                                  fontSize: getProportionateScreenHeight(
-                                      kFontLargeSize),
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
+                          Text(
+                            "CONTACTS",
+                            style: TextStyle(
+                              fontSize: getProportionateScreenHeight(40),
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
                           ),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.email,
-                                size: getProportionateScreenHeight(30),
-                              ),
-                              SizedBox(
-                                width: getProportionateScreenWidth(30),
-                              ),
-                              Text(
-                                "naruechat.b@gmail.com",
-                                style: TextStyle(
-                                  fontSize: getProportionateScreenHeight(
-                                      kFontLargeSize),
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
+                          SizedBox(
+                            height: SizeConfig.screenHeight! * 0.7,
+                            child: const VerticalDivider(
+                              color: Colors.white,
+                              thickness: 2,
+                            ),
                           ),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.location_on,
-                                size: getProportionateScreenHeight(30),
-                              ),
-                              SizedBox(
-                                width: getProportionateScreenWidth(30),
-                              ),
-                              Flexible(
-                                child: Text(
-                                  "2/262 , Moo 6 , Saothonghin Subdistrict , Bangyai District , Nonthaburi , 11140",
-                                  style: TextStyle(
-                                    fontSize: getProportionateScreenHeight(
-                                        kFontLargeSize),
-                                    color: Colors.white,
-                                  ),
+                          SizedBox(
+                            height: SizeConfig.screenHeight! * 0.7,
+                            width: SizeConfig.screenWidth! * 0.45,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.phone,
+                                      size: getProportionateScreenHeight(30),
+                                    ),
+                                    SizedBox(
+                                      width: getProportionateScreenWidth(30),
+                                    ),
+                                    Text(
+                                      "092-3492220",
+                                      style: TextStyle(
+                                        fontSize: getProportionateScreenHeight(
+                                            kFontLargeSize),
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.email,
+                                      size: getProportionateScreenHeight(30),
+                                    ),
+                                    SizedBox(
+                                      width: getProportionateScreenWidth(30),
+                                    ),
+                                    Text(
+                                      "naruechat.b@gmail.com",
+                                      style: TextStyle(
+                                        fontSize: getProportionateScreenHeight(
+                                            kFontLargeSize),
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.location_on,
+                                      size: getProportionateScreenHeight(30),
+                                    ),
+                                    SizedBox(
+                                      width: getProportionateScreenWidth(30),
+                                    ),
+                                    Flexible(
+                                      child: Text(
+                                        "2/262 , Moo 6 , Saothonghin Subdistrict , Bangyai District , Nonthaburi , 11140",
+                                        style: TextStyle(
+                                          fontSize:
+                                              getProportionateScreenHeight(
+                                                  kFontLargeSize),
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ],
+              ),
             ),
-          ),
-        ),
-      ),
-    );
+          );
   }
 
   Widget buildbodyTablet(BuildContext context) {
