@@ -32,16 +32,18 @@ Download and install Flutter from the official site:
 > Check version with:
 ```bash
 flutter --version
+```
 
 ### 2. Clone this repository 
 ```bash
 git clone https://github.com/TXRZXN/MyPort
 cd myport
-
+```
 ### 3. Install project dependencies
 ```bash
 flutter pub get
-
+```
 ### 4. Run the project in your browser (Chrome):
 ```bash
 flutter run -d chrome
+```
