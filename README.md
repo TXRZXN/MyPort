@@ -1,6 +1,6 @@
 # 📁 Myport
 
-> A personal portfolio built with Flutter Web to showcase academic and professional projects. Version 2 is currently planned for future development.
+> A personal portfolio website built with Flutter Web to showcase academic and professional projects. Version 2 is currently planned for future development.
 
 ---
 
@@ -45,5 +45,5 @@ flutter pub get
 ```
 ### 4. Run the project in your browser (Chrome):
 ```bash
-flutter run 
+flutter run -d chrome
 ```
