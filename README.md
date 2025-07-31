@@ -1,16 +1,34 @@
-# portfolio
+# 📁 Myport
 
-A new Flutter project.
+> A personal portfolio website built with Flutter Web to showcase academic and professional projects. Version 2 is currently planned for future development.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Tech Stack
 
-A few resources to get you started if this is your first Flutter project:
+- 🖼️ Flutter (Web)
+- 🧑‍💻 Dart
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📸 Features
+
+- Personal profile and education summary
+- Portfolio showcasing academic and work-related projects
+- Responsive design for both desktop and mobile
+- Planned support for future version (V2) with new features
+- (*Coming soon*) Page visit counter
+
+---
+
+## 🛠️ Installation & Running Locally
+
+### 1. Install Flutter SDK
+
+Download and install Flutter from the official site:  
+👉 [https://flutter.dev/docs/get-started/install](https://flutter.dev/docs/get-started/install)
+
+> Recommended: Use the latest **stable** version  
+> Check version with:
+```bash
+flutter --version
